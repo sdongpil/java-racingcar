@@ -10,6 +10,9 @@ public class Car {
         this.name = s;
     }
 
+    public String getBar() {
+        return bar;
+    }
 
     public void setName(String name) {
         this.name = name;

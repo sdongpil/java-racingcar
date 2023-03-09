@@ -3,11 +3,12 @@ package CarGameTest;
 import java.util.*;
 
 public class GameStart {
+    private static final int numberOfGameAttempts = 5;
+
     public static void main(String[] args) throws lengthLimitException {
         System.out.println("자동차 이름을 입력하시오");
-        Scanner scanner = new Scanner(System.in);
-        String carName = scanner.next();
-        String[] split = carName.split(",");
+
+        String[] split = getCarName();
 
         Car[] car = new Car[split.length];
 
@@ -16,22 +17,14 @@ public class GameStart {
                 throw new lengthLimitException("5글자 이하로 해라");
             }
             car[i] = new Car(split[i]);
-
+            car[i].bar = move(numberOfGameAttempts);
 
         }
 
-//
-//        for (Car car1 : car) {
-//            System.out.println(car1.getName());
-//
-//        }
-//        System.out.println();
-//        int num = 5;
+        for (Car car1 : car) {
+            System.out.println(car1.getName()+car1.getBar());
+        }
 
-
-//        car1.bar = move(num);
-//        car2.bar = move(num);
-//        car3.bar = move(num);
 
 //
 //        Map<String, Integer> map = new HashMap();
@@ -55,6 +48,13 @@ public class GameStart {
 //        for (Map.Entry<Car, Integer> car1IntegerEntry : list) {
 //            System.out.println(car1IntegerEntry.getValue());
 //        }
+    }
+
+    private static String[] getCarName() {
+        Scanner scanner = new Scanner(System.in);
+        String carName = scanner.next();
+        String[] split = carName.split(",");
+        return split;
     }
 
 
