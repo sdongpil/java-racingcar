@@ -16,6 +16,8 @@ public class GameStart {
                 throw new lengthLimitException("5글자 이하로 해라");
             }
             car[i] = new Car(split[i]);
+
+
         }
 
 //
