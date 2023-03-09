@@ -1,0 +1,22 @@
+package CarGameTest;
+
+public class Car {
+
+
+    private String name;
+    public String bar;
+
+    public Car(String s) {
+        this.name = s;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+}
