@@ -1,4 +1,4 @@
-package CarGameTest;
+package carGame;
 
 
 import java.util.*;

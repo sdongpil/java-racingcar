@@ -25,24 +25,34 @@ public class Test {
 
     @org.junit.jupiter.api.Test
     void gameStart() {
-        Car[] cars = getCars();
+        CarGameTest.Car[] cars = getCars();
         GameStart.gameStart(5,cars);
         assertEquals(false,cars[0].bar.isEmpty());
     }
 
     @org.junit.jupiter.api.Test
     void sortInDescendingOrder() {
-        Car[] cars = getCars();
+        CarGameTest.Car[] cars = getCars();
         GameStart.gameStart(5,cars);
         GameStart.sortInDescendingOrder(cars);
         assertEquals(true,cars[0].bar.length() >= cars[1].bar.length());
     }
 
-    private static Car[] getCars() {
+    private CarGameTest.Car[] getCars() {
         String[] carNames = {"car1", "car2", "car3"};
-        Car[] cars = GameStart.carCreate(carNames);
+        CarGameTest.Car[] cars = GameStart.carCreate(carNames);
         return cars;
     }
+
+//    private static Car[] getCars() {
+//        String[] carNames = {"car1", "car2", "car3"};
+//        return  GameStart.carCreate(carNames);
+//
+//
+//    }
+
+
+
 
 
 }
