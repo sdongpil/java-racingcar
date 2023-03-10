@@ -4,7 +4,7 @@ public class Car {
 
 
     private String name;
-    public String bar;
+    public String bar = "";
 
     public Car(String s) {
         this.name = s;
