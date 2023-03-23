@@ -5,14 +5,14 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class Test {
+public class CarTest {
 
 
     @org.junit.jupiter.api.Test
     void 자동차이름_5글자_이하_아닐시_예외발생() {
         String[] carNames = {"123456"};
         assertThrows(LengthLimitException.class, () -> {
-            GameStart.nameLimit(carNames);
+            GameStart.limitTheNumberOfCharacters(carNames);
         });
     }
 
@@ -27,7 +27,7 @@ public class Test {
     void gameStart() {
         CarGameTest.Car[] cars = getCars();
         GameStart.gameStart(5,cars);
-        assertEquals(false,cars[0].bar.isEmpty());
+        assertEquals(false,cars[0].getBar().isEmpty());
     }
 
     @org.junit.jupiter.api.Test
@@ -35,7 +35,7 @@ public class Test {
         CarGameTest.Car[] cars = getCars();
         GameStart.gameStart(5,cars);
         GameStart.sortInDescendingOrder(cars);
-        assertEquals(true,cars[0].bar.length() >= cars[1].bar.length());
+        assertEquals(true,cars[0].getBar().length() >= cars[1].getBar().length());
     }
 
     private CarGameTest.Car[] getCars() {

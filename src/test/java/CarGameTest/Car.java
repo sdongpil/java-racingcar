@@ -4,7 +4,10 @@ public class Car {
 
 
     private String name;
-    public String bar = "";
+    private String bar = "";
+
+    private int count;
+
 
     public Car(String s) {
         this.name = s;
@@ -12,6 +15,10 @@ public class Car {
 
     public String getBar() {
         return bar;
+    }
+
+    public void setBar(String bar) {
+        this.bar += bar;
     }
 
     public void setName(String name) {

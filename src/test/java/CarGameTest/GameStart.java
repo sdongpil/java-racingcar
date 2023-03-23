@@ -28,7 +28,7 @@ public class GameStart {
             System.out.print(carName + ",");
         }
         System.out.println();
-        nameLimit(carNames);
+        limitTheNumberOfCharacters(carNames);
         return carNames;
     }
 
@@ -53,7 +53,7 @@ public class GameStart {
         for (int j = 0; j < numberOfGameAttempts; j++) {
             for (int i = 0; i < cars.length; i++) {
                 if (random.nextInt(10) >= 4) {
-                    cars[i].bar += "-";
+                    cars[i].setBar("-");
                 }
             }
             printCars(cars);
@@ -65,7 +65,7 @@ public class GameStart {
     private static void printCars(Car[] cars) {
         for (Car car : cars) {
             System.out.print(car.getName() + " ");
-            System.out.println(car.bar);
+            System.out.println(car.getBar());
         }
         System.out.println();
     }
@@ -78,7 +78,7 @@ public class GameStart {
         return split;
     }
 
-    static void nameLimit(String[] split) throws LengthLimitException {
+    static void limitTheNumberOfCharacters(String[] split) throws LengthLimitException {
         for (int i = 0; i < split.length; i++) {
             if (split[i].length() >= 6) {
                 throw new LengthLimitException("5글자 이하로 해라");
@@ -97,7 +97,7 @@ public class GameStart {
     private static void printTheWinner(Car[] carArray) {
         List<Car> carList = new ArrayList<>();
         for (int i = 0; i < carArray.length - 1; i++) {
-            if (carArray[0].bar.length() == carArray[i + 1].bar.length()) {
+            if (carArray[0].getBar().length() == carArray[i + 1].getBar().length()) {
                 carList.add(carArray[i + 1]);
             }
         }
@@ -115,7 +115,7 @@ public class GameStart {
         for (int i = 0; i < carArray.length; i++) {
 
             for (int j = 0; j < carArray.length; j++) {
-                if (carArray[i].bar.length() > carArray[j].bar.length()) {
+                if (carArray[i].getBar().length() > carArray[j].getBar().length()) {
                     Car temp = carArray[i];
                     carArray[i] = carArray[j];
                     carArray[j] = temp;

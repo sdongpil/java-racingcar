@@ -1,4 +1,4 @@
-package carGame;
+package carGame.exception;
 
 public class LengthLimitException extends Exception {
 
