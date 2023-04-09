@@ -44,12 +44,7 @@ public class CarTest {
         return cars;
     }
 
-//    private static Car[] getCars() {
-//        String[] carNames = {"car1", "car2", "car3"};
-//        return  GameStart.carCreate(carNames);
-//
-//
-//    }
+
 
 
 

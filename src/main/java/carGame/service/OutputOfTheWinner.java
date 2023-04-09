@@ -42,12 +42,5 @@ public class OutputOfTheWinner {
         }
     }
 
-//   Stream연습
-//    private static Stream<Car> sortInDescendingOrder2(Car[] carArray) {
-//       Stream.of(carArray)
-//              .sorted(Comparator.comparing(Car::getCount))
-//              .forEach(System.out::println);
-//      Stream<Car> stream = Arrays.stream(carArray);
-//        return stream.sorted(Comparator.comparing(Car::getCount));
-//    }
+
 }

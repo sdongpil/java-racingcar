@@ -2,9 +2,8 @@ package carGame.service;
 
 import carGame.domain.Car;
 import carGame.exception.LengthLimitException;
-import carGame.service.CarNameCreate;
 
-public class CarsCreate {
+public class CarsFactory {
     public static Car[] carCreate() throws LengthLimitException {
         String[] carNames = CarNameCreate.enterCarName();
         Car[] cars = new Car[carNames.length];

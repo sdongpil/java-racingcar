@@ -12,9 +12,6 @@ public class Car {
         this.count += count;
     }
 
-    public int getCount() {
-        return count;
-    }
 
     public Car(String s) {
         this.name = s;

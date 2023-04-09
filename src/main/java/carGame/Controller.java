@@ -4,7 +4,7 @@ package carGame;
 import carGame.domain.Car;
 import carGame.exception.LengthLimitException;
 import carGame.service.CarGameStart;
-import carGame.service.CarsCreate;
+import carGame.service.CarsFactory;
 import carGame.service.GameCycle;
 import carGame.service.OutputOfTheWinner;
 
@@ -12,7 +12,7 @@ public class Controller {
 
     public static void main(String[] args) throws LengthLimitException {
         //자동차 이름 입력받기
-        Car[] cars = CarsCreate.carCreate();
+        Car[] cars = CarsFactory.carCreate();
 
         //게임 시도 횟수 정하기
         int numberOfGameAttempts = GameCycle.getNumberOfGameAttempts();

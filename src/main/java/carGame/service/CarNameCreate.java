@@ -12,7 +12,7 @@ public class CarNameCreate {
             System.out.print(carName + ",");
         }
         System.out.println();
-        nameLimit(carNames);
+        limitNameLength(carNames);
         return carNames;
     }
 
@@ -23,7 +23,7 @@ public class CarNameCreate {
         return split;
     }
 
-    private static void nameLimit(String[] split) throws LengthLimitException {
+    private static void limitNameLength(String[] split) throws LengthLimitException {
         for (int i = 0; i < split.length; i++) {
             if (split[i].length() >= 6) {
                 throw new LengthLimitException("5글자 이하로 하시오");
